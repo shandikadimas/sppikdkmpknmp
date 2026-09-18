@@ -47,8 +47,7 @@ button.danger:hover{box-shadow:0 8px 16px -8px rgba(239,68,68,.5)}
 /* ============ HEADER ============ */
 header{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);color:var(--text);padding:10px 20px;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
 .brand{display:flex;align-items:center;gap:11px;font-size:16.5px;font-weight:800;letter-spacing:-.2px;color:var(--text);}
-.brand-logo{height:38px;width:auto;border-radius:9px;flex:0 0 auto;}
-.auth-logo{height:46px;width:auto;}
+
 .brand-txt{display:flex;flex-direction:column;gap:2px}
 .sub{font-size:10.5px;color:var(--muted);font-weight:500;}
 .manager{display:flex;align-items:center;justify-content:space-between;gap:16px;}
@@ -284,10 +283,10 @@ footer{text-align:center;color:var(--muted);font-size:10px;padding:22px;border-t
   }
 }
 
-@media (max-width: 600px) {
-  .chartgrid {
-    display: none !important;
-  }
+/* Grafik hanya untuk desktop, tablet & layar besar */
+@media (max-width: 640px) {
+  .chartgrid { display: none !important; }
+  #judulGrafis { display: none; }
 }
   @media(max-width:1000px){
  body{padding-left:0}
@@ -405,8 +404,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;padding:22px;border-t
 </div>
 </div>
 <div class="auth-box">
-<div class="brand-logo" style="width:56px;height:38px;overflow:hidden;border-radius:9px;flex:0 0 auto"><img src="logo.png" alt="Logo Koperasi" style="height:38px;width:auto;display:block"></div>
-
+<div class="auth-logo" style="width:66px;height:46px;overflow:hidden;display:flex;align-items:center;justify-content:center"><img src="logo.png" alt="Logo" style="height:46px;width:auto;display:block"></div>
 <div id="authLoginForm">
 <div class="field">
 <label>Username</label>
@@ -446,10 +444,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;padding:22px;border-t
 </div>
 <div id="appRoot" style="display:none">
 <header>
-<div class="brand"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-logo" style="border-radius:0"><path d="M3 21h18"/><path d="M5 21V9l7-6 7 6v12"/><path d="M9 21v-6h6v6"/></svg><span>Koperasi Manager Control Center</span></div>
-<div class="sub">Pusat Kendali Operasional &bull; Retail &bull; Keuangan &bull; Risiko &bull; SHU</div>
-<div class="manager">
-<div>
+<div class="brand-logo" style="width:56px;height:38px;overflow:hidden;border-radius:9px;flex:0 0 auto"><img src="logo.png" alt="Logo Koperasi" style="height:38px;width:auto;display:block"></div>
 <strong id="headerManagerName">Manager Koperasi</strong>
 <small id="headerKoperasiName">Koperasi Simpan Pinjam &amp; Usaha Sejahtera</small>
 <small id="headerLoginUser"></small>
